@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span>Online Shoping</span>
+    <span class="example-spacer"></span>
+    </mat-toolbar>
+<div class="main">
+
+<div class="main-container text-center">
+    <div class="main-content-image">
+        <img class="img-render" [src]="productInfo.productImage"/>
+    </div>
+    <div class="main-content-data">
+        <div class="product-name">
+            {{productInfo.productName}}
+        </div>
+        <div>
+            <span class="rating-info">
+                {{productInfo.rating}}
+                <mat-icon class="star-icon">star</mat-icon>
+            </span>
+            <span class="rating-color">
+                {{productInfo.ratingsCount | number}} Ratings & {{productInfo.reviewsCount | number}} Reviews
+            </span>
+        </div>
+        <ul class="desc-style">
+            <li>
+                {{productInfo.storageInfo}}
+            </li>
+            <li>
+                {{productInfo.dispayInfo}}
+            </li>
+            <li>
+                {{productInfo.cameraInfo}}
+            </li>
+            <li>
+                {{productInfo.batteryInfo}}
+            </li>
+            <li>
+                {{productInfo.processorInfo}}
+            </li>
+            <li>
+                {{productInfo.displayInfo}}
+            </li>
+            <li>
+                {{productInfo.warrantyInfo}}
+            </li>
+        </ul>
+    </div>
+    <div class="main-content-price">
+        <div class="price-info">
+            {{productInfo.price | currency:'INR':true}}
+        </div>
+        <div class="free-delivery">
+            {{productInfo.delivery}}
+        </div>
+        <div>
+            <mat-icon class="add_to_cart_icon">add_shopping_cart</mat-icon>
+        </div>
+    </div>
+</div>
+</div>
+
+
